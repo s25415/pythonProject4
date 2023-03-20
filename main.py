@@ -1,3 +1,4 @@
+from os import system
 from random import random, randint
 
 
@@ -37,8 +38,10 @@ def zad3():
     wynik2=0
     for i in range(1, iloscRund+1):
         akcja1 = int(input(gracz1 + ": Kamień(1), papier(2), czy nożyce(3)?"))
+        system('cls')
         if gracze == 2:
             akcja2 = int(input(gracz2 + ": Kamień(1), papier(2), czy nożyce(3)?"))
+            system('cls')
         else :
             akcja2 = randint(1,3)
             match akcja2:
@@ -53,7 +56,7 @@ def zad3():
         if akcja2 == 1 and akcja1 == 2 or akcja2 == 2 and akcja1 == 3 or akcja2 == 3 and akcja1 == 1:
             wynik1 += 1
 
-    print()
+    system('cls')
     print("Koniec")
     print(gracz1 + ": " + str(wynik1)+" punktów")
     print(gracz2 + ": " + str(wynik2)+" punktów")
